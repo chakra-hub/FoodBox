@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+a{
+  color: black;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  z-index: 2;
+}
+
+.header > a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  font-size: 25px;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.nav_itmes {
+  list-style: none;
+  display: flex;
+  margin-right: 15px;
+}
+
+.nav_item {
+  padding: 10px;
+}
+.nav_item > a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.main_content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shimmer_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#cities{
+  margin-right: 30px;
+}
+
+.resturant_card {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 300px;
+  width: 225px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 4px rgb(194, 194, 194);
+}
+
+.resturant_card:hover {
+  box-shadow: 0 0 12px rgb(156, 156, 156);
+  transform: scale(1.025);
+}
+
+.food_img {
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.resturant_name {
+  font-weight: 500;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.cuisines {
+  font-size: 12px;
+  color: gray;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.rating_time_price {
+  margin-bottom: 5px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgb(67, 67, 67);
+}
+
+.rating {
+  background-color: rgb(0, 191, 0);
+  border-radius: 3px;
+  padding: 0 3px;
+  color: white;
+}
+
+.offer {
+  color: brown;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search_container {
+  margin-left: 40px;
+  margin-top: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.search_bar {
+  padding: 5px;
+  width: 365px;
+  height: 25px;
+  outline: 0;
+  font-size: 16px;
+}
+
+.submit_btn {
+  color: white;
+  background-color: black;
+  padding: 10px 10px;
+  margin-left: 5px;
+  border-radius: 3px;
+}
+
+.submit_btn:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+.not_found {
+  font-weight: 500;
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+.error_page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shimmer_resturant_card {
+  padding: 10px;
+  margin: 60px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 250px;
+  width: 225px;
+  box-sizing: border-box;
+  cursor: disabled;
+  transition: 0.3s;
+}
+
+.shimmer_food_img {
+  border-radius: 3px;
+  width: 205px;
+  height: 129px;
+  border: 0;
+  background-color: gainsboro;
+  margin-bottom: 5px;
+}
+
+.shimmer_resturant_name {
+  border-radius: 3px;
+  font-weight: 500;
+  background-color: gainsboro;
+  height: 18px;
+  width: 60%;
+  margin-bottom: 5px;
+}
+
+.shimmer_cuisines {
+  border-radius: 3px;
+  height: 22px;
+  background-color: gainsboro;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.shimmer_rating_time_price {
+  border-radius: 3px;
+  margin-bottom: 5px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 19px;
+  background-color: gainsboro;
+}
+
+.shimmer_offer {
+  border-radius: 3px;
+  background-color: gainsboro;
+  width: 100%;
+  height: 14px;
+}
+
+.resturant_details_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resturant_header {
+  color: white;
+  width: 100%;
+  height: 250px;
+  background-color: rgb(46, 46, 46);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.resturant_food_image {
+  width: 260px;
+  height: 160px;
+  border-radius: 3px;
+}
+
+.offer_detail {
+  list-style: none;
+}
+
+.resturant_menu {
+  width: 100%;
+  height: 50vh;
+  overflow-y: scroll;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ratings_timing_other {
+  margin-top: 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ratings_timing_other_item {
+  list-style: none;
+}
+
+.name_details {
+  color: gainsboro;
+  font-weight: 100;
+}
+
+.offer_label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.offer_item {
+  font-size: 14px;
+}
+.menu_container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu_category {
+  width: 25%;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+.menu_items {
+  width: 45%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.menu_to_cart {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  width: 90%;
+  height: 150px;
+  border-bottom: 1px solid gray;
+}
+
+.menu_card_image {
+  width: 90px;
+  border-radius: 3px;
+}
+
+.right_menu_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add_item_btn {
+  color: green;
+  background-color: white;
+  border: 1px solid green;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.add_item_btn:hover {
+  background-color: green;
+  color: white;
+}
+
+.veg_non_veg_icon {
+  width: 20px;
+}
+
+.cart_image {
+  height: 160px;
+  width: 150px;
+  background-color: aqua;
+  border-radius: 3px;
+}
+
+.search_boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+
+.city_search {
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.city_search_bar {
+  height: 23px;
+  padding: 5px;
+  width: 150px;
+  outline: 0;
+  margin-right: 5px;
+}
+
+.search_city_btn {
+  background-color: navy;
+  color: white;
+  outline: 0;
+  border: 0;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.shimmer_resturant_detail_container {
+  color: white;
+  width: 100%;
+  height: 250px;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shimmer_menu_container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shimmer_menu_items {
+  width: 45%;
+  height: 100%;
+}
+
+.shimmer_menu_to_cart {
+  width: 30%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  background-color: gainsboro;
+}
+
+.shimmer_menu_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  width: 90%;
+  height: 150px;
+  background-color: gainsboro;
+}
+
+.cart_container {
+  width: 500px;
+  margin: auto;
+  height: 88vh;
+  padding: 10px;
+  box-shadow: 0 0 4px gainsboro;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart_heading {
+  position: relative;
+  box-shadow: 0 0 4px gainsboro;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  height: 70px;
+  width: 100%;
+}
+
+.cart_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  height: 70%;
+  width: 100%;
+  box-shadow: 0 0 4px gainsboro;
+  border-radius: 6px;
+  background-color: gainsboro;
+}
+.cart_items::-webkit-scrollbar {
+  display: none;
+}
+
+.to_pay {
+  width: 100%;
+  height: 10%;
+}
+
+.cart_item_card {
+  display: flex;
+  height: 100px;
+  padding: 30px 0;
+  width: 95%;
+  box-shadow: 0 0 4px rgb(234, 233, 233);
+  border-radius: 6px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.item_name {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  width: 70%;
+  font-weight: 500;
+}
+
+.item_amount {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to_pay {
+  font-weight: 700;
+  width: 96%;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 4px gainsboro;
+  border-radius: 6px;
+  background-color: yellow;
+}
+
+.clear_all {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.clear_all:hover {
+  color: white;
+  background-color: black;
+}
+
+.search_any_bar{
+  width: 300px;
+}
+
+.search_results{
+  list-style: none;
+  position: fixed;
+  background-color: white;
+  color: black;
+  width: 280px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.search_result_item{
+  margin: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.form_container{
+  border-radius: 5px;
+  background-color: white;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign_up{font-size: 30px;
+  margin: 20px 0;
+font-weight: 600;}
+
+.label{
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.input_area{
+  width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  margin-top: 2px;
+  padding: 8px;
+  outline: 0;
+}
+
+.submit_btn_form{
+  margin: 20px 0;
+  padding: 5px 10px;
+  background-color: skyblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error_msg{
+  color: red;
+  font-size: 10px;
+}
+
+.signed_in{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 60vw;
+  height: 60vh;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  box-shadow: 0 0 10px gray;
+  font-size: 30px;
+}
+
+.cross{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  font-size: 18px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer{
+  margin: 20px 0 0 0;
+  padding: 10px 0;
+  height: auto;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.copyright,.footer_items{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_items{
+  color: gainsboro;
+  margin-top: 20px;
+ font-size: 14px;
+}
+
+.footer_cities{
+  color: gray;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer_city{
+  padding: 5px;
+  font-size: 12px;
+  margin: 5px;
+}
