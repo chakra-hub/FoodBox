@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 const useResturants = (resId) => {
   const {latitude, longitude} = useSelector((store)=> store.latlong)
-  console.log(latitude,latitude)
   const [resturantDetails, setResturantDetails] = useState({});
   const [menu, setMenu] = useState([]);
   const RESTURANT_DETAIL_API = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${latitude}&lng=${longitude}&restaurantId=`

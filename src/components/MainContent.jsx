@@ -25,7 +25,7 @@ const MainContent = () => {
 
   const fetchCity = async () => {
     const response = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${city_search}&limit=5&appid=2b29329a1244d63c803ce49dcbc3c85f`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${city_search}&limit=5&appid=2b29329a1244d63c803ce49dcbc3c85f`
     );
     const data = await response.json();
     if (data.length != 0) {
@@ -43,8 +43,8 @@ const MainContent = () => {
       `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&page_type=DESKTOP_WEB_LISTING`
     );
     const data = await response.json();
-    setResturants(data?.data?.cards[2].data?.data?.cards);
-    setFilteredResturants(data?.data?.cards[2].data?.data?.cards);
+    setResturants(data?.data?.cards[1]?.data?.data?.cards);
+    setFilteredResturants(data?.data?.cards[1]?.data?.data?.cards);
   };
 
   if (isOnline == false) {
@@ -87,7 +87,6 @@ const MainContent = () => {
           </button>
         </form>
         <select name="cars" id="cities" onClick={(e)=>{
-            console.log(e.target.value);
             setCitySearch(e.target.value);
             setCity(e.target.value)
             }}>

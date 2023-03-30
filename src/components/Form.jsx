@@ -59,9 +59,7 @@ export const Form = () => {
   }
 
   useEffect(()=>{
-    console.log(allError)
     if(Object.keys(allError).length==0){
-      console.log(user)
     }
 
   },[allError])

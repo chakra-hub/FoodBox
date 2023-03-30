@@ -10,7 +10,6 @@ const coordinateSlice = createSlice({
         updateCoordinates: (state, action)=>{
             state.latitude=action.payload[0];
             state.longitude=action.payload[1];
-            console.log(state.latitude, state.longitude)
         }
     }
 })

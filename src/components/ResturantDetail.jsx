@@ -73,7 +73,6 @@ const ResturantDetail = () => {
               return (
                 <div className="menu_card" key={element.id}>
                   <div className="left_menu_card">
-                    {console.log(element.card.info)}
                     {element?.card?.info?.itemAttribute?.vegClassifier == "NONVEG" ? (
                       <img
                         className="veg_non_veg_icon"
